@@ -97,13 +97,12 @@ body {
   display: flex;
   justify-content: space-around;
   margin-top: 60px
-  
 }
 
 .score p{
   font-size: 50px;
   font-family: "Press Start 2P", system-ui;
-  color:whitesmoke;
+  color:rgb(0, 0, 0);
 }
 .youwin{
   display: none;

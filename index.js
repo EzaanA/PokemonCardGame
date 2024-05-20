@@ -143,7 +143,7 @@ let ct=0,res=0;
 
     if(firstGuess != secondGuess && secondGuess!=''){
       ct++;
-      if(ct%2==0){
+      if(ct%4==0){
         lives-=1;
           document.querySelector('.lives').innerHTML = `LIVES : ${lives}`;
       }
