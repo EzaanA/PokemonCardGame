@@ -6,6 +6,10 @@
 
 body {
   margin: 20px 0;
+  background-image: url("ball.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
 }
 
 #video-background {

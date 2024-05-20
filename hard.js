@@ -128,7 +128,7 @@ let ct=0,res=0;
         if (firstGuess === secondGuess) {
             score++;
             document.querySelector('.rscore').innerHTML = `Score : ${score}`
-            if(score==2){
+            if(score==12){
               document.querySelector('.grid').classList.add('removeEv')
               setTimeout(()=>{
                 document.querySelector('.youwin').classList.add('visibil');
