@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,6 +5,12 @@
   <title>LANDING PAGE</title>
 </head>
 <body>
-  <button>PLAY</button>
+  <button id="myButton">Click me</button>
+
+<script>
+document.getElementById('myButton').onclick = function () {
+    location.href = 'index2.html';
+};
+</script>
 </body>
 </html>
