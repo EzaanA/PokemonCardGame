@@ -1,0 +1,82 @@
+.easy{
+  font-family: "Press Start 2P", system-ui;
+  font-size: 100px;
+  text-decoration: none;
+    color: black;
+    margin-bottom: 130px;
+
+}
+
+
+.hard{
+  font-family: "Press Start 2P", system-ui;
+  font-size: 100px;
+  text-decoration: none;
+  color: black;
+  
+}
+.ezdiv{
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: fit-content;
+}
+
+.hrdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.both{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  height: 180px;
+}
+
+.dot{
+  margin: 0 0 ;
+  font-size:100px;
+}
+
+.head{
+  display: flex;
+  justify-content: center;
+}
+
+
+h1{
+  font-size: 110px;
+  margin-top: 80px;
+  margin-bottom: 140px;
+  font-family: "Press Start 2P", system-ui;
+
+}
+
+#video-background {
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto; 
+  z-index: -100;
+}
+
+#video-background video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
