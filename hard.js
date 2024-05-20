@@ -102,6 +102,7 @@ let ct=0,res=0;
     });
   };
 
+
   grid.addEventListener('click', function (event) {
   
     let clicked = event.target;
@@ -109,7 +110,7 @@ let ct=0,res=0;
     if (clicked.nodeName === 'SECTION' || clicked === previousTarget || clicked.parentNode.classList.contains('selected') || clicked.parentNode.classList.contains('match')) {
       return;
     }
-  
+    
     if (count < 2) {
       count++;
       if (count === 1) {
@@ -121,12 +122,13 @@ let ct=0,res=0;
         console.log(secondGuess);
         clicked.parentNode.classList.add('selected');
       }
-  
       if (firstGuess && secondGuess) {
+        console.log(`This is FG ${firstGuess}`);
+        console.log(`This is SG ${secondGuess}`);
         if (firstGuess === secondGuess) {
             score++;
             document.querySelector('.rscore').innerHTML = `Score : ${score}`
-            if(score==12){
+            if(score==2){
               document.querySelector('.grid').classList.add('removeEv')
               setTimeout(()=>{
                 document.querySelector('.youwin').classList.add('visibil');
@@ -138,19 +140,29 @@ let ct=0,res=0;
         }
         setTimeout(resetGuesses, delay);
       }
-      // else{
-      //   res= lives-0.5;
-      //   ++ct;
-      //   if(ct%2==0){
-      //   document.querySelector('.lives').innerHTML = `${res}`;
-      //   }
-      // }
       previousTarget = clicked;
     }
+    if(firstGuess != secondGuess && secondGuess!=''){
+      ct++;
+      if(ct%2==0){
+        lives-=1;
+          document.querySelector('.lives').innerHTML = `LIVES : ${lives}`;
+      }
+      if(lives==0){
+        endGame();
+      }
+    }
   });
+  
 
 
+function endGame(){
 
-
+  setTimeout(()=>{
+    document.querySelector('#game').classList.add('endgame');
+    document.querySelector('.lose').classList.add('lvis');
+    document.querySelector('.lose').innerHTML = 'YOU LOSE!'
+  },1000)
+}
 
 

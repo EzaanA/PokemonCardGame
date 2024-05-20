@@ -122,3 +122,20 @@ body {
 .removeEv{
   display: none;
 }
+
+
+.endgame{
+  display: none;
+}
+
+.lose{
+  display: none;
+}
+.lvis{
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+  margin-bottom: 0px;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 100px;
+}

@@ -41,6 +41,8 @@ let cardsArray = [
 
 let score = 0;
 let lives=6; 
+let ct=0,res=0;
+
 
   
   // console.log(cardsArray);
@@ -138,10 +140,28 @@ let lives=6;
       }
       previousTarget = clicked;
     }
+
+    if(firstGuess != secondGuess && secondGuess!=''){
+      ct++;
+      if(ct%2==0){
+        lives-=1;
+          document.querySelector('.lives').innerHTML = `LIVES : ${lives}`;
+      }
+      if(lives==0){
+        endGame();
+      }
+    }
+
   });
 
 
 
-
+  function endGame(){
+    setTimeout(()=>{
+      document.querySelector('#game').classList.add('endgame');
+      document.querySelector('.lose').classList.add('lvis');
+      document.querySelector('.lose').innerHTML = 'YOU LOSE!'
+    },1000)
+  }
 
 
